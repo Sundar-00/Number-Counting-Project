@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex flex-col justify-center items-center bg-[url('https://ik.imagekit.io/sundar07/css-pattern-by-magicpattern.png?updatedAt=1723275507935')]">
+    
+        <div class="bg-slate-400 w-[300px] h-[300px] rounded-lg mt-44 ocean">
+
+            <div class="bubble bubble--1"></div>
+            <div class="bubble bubble--2"></div>
+            <div class="bubble bubble--3"></div>
+            <div class="bubble bubble--4"></div>
+            <div class="bubble bubble--5"></div>
+            <div class="bubble bubble--6"></div>
+            <div class="bubble bubble--7"></div>
+            <div class="bubble bubble--8"></div>
+            <div class="bubble bubble--9"></div>
+            <div class="bubble bubble--10"></div>
+            <div class="bubble bubble--11"></div>
+            <div class="bubble bubble--12"></div>
+
+            <div class="flex flex-col justify-center items-center mt-10 gap-y-4">
+                <h3 class="font-semibold content-center text-[60px] font-[Caveat]">Counter</h3>
+                <p id="paa" class="content-center text-4xl">0</p>
+                
+                <div class="flex gap-5">
+                    <button class="bg-[#fff] w-10 h-10 font-semibold rounded-lg border border-[#000]" id="bb1">-</button>
+                    <button class="bg-[#fff] w-16 h-10 font-semibold rounded-lg border border-[#000]" id="bb2">reset</button>
+                    <button class="bg-[#fff] w-10 h-10 font-semibold rounded-lg border border-[#000]" id="bb3">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="octocat"></div>
+
+    </div>
+
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () =>{
+
+    const paa =document.getElementById("paa")
+    const b1 =document.getElementById("bb1")
+    const b2 =document.getElementById("bb2")
+    const b3 =document.getElementById("bb3")
+
+
+    b1.addEventListener("click",()=>{
+        paa.textContent=parseInt(paa.textContent) - 1
+        paa.style.color="red"
+    })
+
+    b2.addEventListener("click",()=>{
+        paa.textContent=0
+        paa.style.color="#000"
+    })
+
+    b3.addEventListener("click",()=>{
+        paa.textContent=parseInt(paa.textContent) + 1
+        paa.style.color="#ecf39e"
+    })
+
+})
+
+</script>
+</html>
